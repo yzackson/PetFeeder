@@ -26,12 +26,12 @@ void setup() {
 
 void loop() {
   weight = scale.get_units();
-  Serial.print(weight);
+  Serial.print(round(weight));
   serial = Serial.read();
   if (serial == 'A') {
     digitalWrite(pinMotor, LOW);
   } else {
     digitalWrite(pinMotor, HIGH);
   }
-  delay(20);
+  delay(100);
 }
